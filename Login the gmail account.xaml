@@ -140,7 +140,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:UiElementExists DisplayName="Google account icon element is exists" Exists="[bool_googleAccountIcon]" sap:VirtualizedContainerService.HintSize="544,96" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
                     <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9be22af0-9664-4483-b07b-5d7f443a1cf9" Selector="&lt;webctrl class='gb_Ef gb_2a gb_qg gb_l' /&gt;" TimeoutMS="[int_timeOut]" WaitForReady="COMPLETE" />
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9be22af0-9664-4483-b07b-5d7f443a1cf9" Selector="&lt;webctrl class='gb_Ef gb_2a gb_qg gb_l' /&gt;" TimeoutMS="30000" WaitForReady="COMPLETE" />
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
                   <If Condition="[bool_googleAccountIcon]" DisplayName="If the Google account icon element is exists" sap:VirtualizedContainerService.HintSize="544,363" sap2010:WorkflowViewState.IdRef="If_6">
