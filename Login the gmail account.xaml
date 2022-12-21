@@ -8,10 +8,10 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,4100</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,4177</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_the_gmail_account_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="54">
+    <scg:List x:TypeArguments="x:String" Capacity="28">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -81,7 +81,7 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="802,4035" sap2010:WorkflowViewState.IdRef="Sequence_14">
+  <Sequence sap:VirtualizedContainerService.HintSize="802,4112" sap2010:WorkflowViewState.IdRef="Sequence_14">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:BrowserType" Name="edge" />
     </Sequence.Variables>
@@ -90,9 +90,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="740,3913" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="740,3990" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="Login the google account and go to the account gmail&#xA; " DisplayName="Login_the_gmail_account" sap:VirtualizedContainerService.HintSize="702,3654" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap2010:Annotation.AnnotationText="Login the google account and go to the account gmail&#xA; " DisplayName="Login_the_gmail_account" sap:VirtualizedContainerService.HintSize="702,3731" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Default="https://google.com/" Name="str_Url" />
             <Variable x:TypeArguments="ui:Browser" Name="out_uiOpenBrowser" />
@@ -125,13 +125,13 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </WriteLine>
-          <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="[edge]" DisplayName="Open the google Search page" sap:VirtualizedContainerService.HintSize="640,3279" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[out_uiOpenBrowser]" Url="[str_Url]">
+          <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="[edge]" DisplayName="Open the google Search page" sap:VirtualizedContainerService.HintSize="640,3356" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[out_uiOpenBrowser]" Url="[str_Url]">
             <ui:OpenBrowser.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,3168" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,3245" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -177,7 +177,10 @@
                       <Throw Exception="[New BusinessRuleException(&quot;Google account icon element is not exists&quot;)]" sap:VirtualizedContainerService.HintSize="334,97" sap2010:WorkflowViewState.IdRef="Throw_1" />
                     </If.Else>
                   </If>
-                  <Sequence sap2010:Annotation.AnnotationText="1)To check the given user Email Id is alreadly login or not.&#xA;&#xA;2)Alreadly login means log the message. Useremail Id is not alreadly login means click the add another google account.&#xA;&#xA;3)Use your google account element is exists to type the useremailid or Use your google account element is not exists to log message.&#xA;&#xA;4)Forget password element is exists to type userpassword or Forget password element is  not exists to log message.&#xA;&#xA;5)Cancel  switch the existing chrome profile in the click activity.&#xA;&#xA;6)Click the Gmail menu in the google search page.&#xA;" DisplayName="Google account - Sequence" sap:VirtualizedContainerService.HintSize="544,2507" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence sap2010:Annotation.AnnotationText="1)To check the given user Email Id is alreadly login or not.&#xA;&#xA;2)Alreadly login means log the message. Useremail Id is not alreadly login means click the add another google account.&#xA;&#xA;3)Use your google account element is exists to type the useremailid or Use your google account element is not exists to log message.&#xA;&#xA;4)Forget password element is exists to type userpassword or Forget password element is  not exists to log message.&#xA;&#xA;5)Cancel  switch the existing chrome profile in the click activity.&#xA;&#xA;6)Click the Gmail menu in the google search page.&#xA;" DisplayName="Google account - Sequence" sap:VirtualizedContainerService.HintSize="544,2584" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="bool_gmailMenu" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -311,10 +314,10 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:UiElementExists>
-                    <If Condition="[bool_forgetPassword]" DisplayName="If the Forget password element is exists" sap:VirtualizedContainerService.HintSize="482,387" sap2010:WorkflowViewState.IdRef="If_5">
+                    <If Condition="[bool_forgetPassword]" DisplayName="If the Forget password element is exists" sap:VirtualizedContainerService.HintSize="482,61" sap2010:WorkflowViewState.IdRef="If_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -371,27 +374,39 @@
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="40f94109-8be5-4685-8fd9-06582c7f259d" Selector="[string.Format(&quot;&lt;wnd app='{0}' cls='Chrome_WidgetWin_1' /&gt;&lt;ctrl name='Cancel' role='push button' /&gt;&quot;, ui_appExe)]" TimeoutMS="[int_timeOut]" WaitForReady="COMPLETE" />
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click the Gmail menu" sap:VirtualizedContainerService.HintSize="482,96" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c2a46617-52d2-4ee7-bc8f-d539728d6a4f" Selector="&lt;webctrl tag='DIV' class='gb_k gb_l' innertext='Gmail' /&gt;" TimeoutMS="[int_timeOut]" WaitForReady="COMPLETE" />
-                      </ui:Click.Target>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:Click>
+                    <ui:UiElementExists DisplayName="Gmail menu element is exists" Exists="[bool_gmailMenu]" sap:VirtualizedContainerService.HintSize="482,96" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a798bccb-cc9e-4f59-bb5c-30897f7a61ba" Selector="&lt;webctrl tag='DIV' class='gb_k gb_l' innertext='Gmail' /&gt;" TimeoutMS="[int_timeOut]" WaitForReady="COMPLETE" />
+                      </ui:UiElementExists.Target>
+                    </ui:UiElementExists>
+                    <If Condition="[bool_gmailMenu]" DisplayName="If the gmail menu element is exists" sap:VirtualizedContainerService.HintSize="482,363" sap2010:WorkflowViewState.IdRef="If_7">
+                      <If.Then>
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click the Gmail menu" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:Click.CursorPosition>
+                          <ui:Click.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c2a46617-52d2-4ee7-bc8f-d539728d6a4f" Selector="&lt;webctrl tag='DIV' class='gb_k gb_l' innertext='Gmail' /&gt;" TimeoutMS="[int_timeOut]" WaitForReady="COMPLETE" />
+                          </ui:Click.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:Click>
+                      </If.Then>
+                      <If.Else>
+                        <Throw Exception="[New BusinessRuleException(&quot;The gmail menu page is not found&quot;)]" sap:VirtualizedContainerService.HintSize="334,97" sap2010:WorkflowViewState.IdRef="Throw_7" />
+                      </If.Else>
+                    </If>
                   </Sequence>
                 </Sequence>
               </ActivityAction>
